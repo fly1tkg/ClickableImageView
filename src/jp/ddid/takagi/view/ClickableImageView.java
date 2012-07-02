@@ -78,6 +78,7 @@ public class ClickableImageView extends ImageView {
                 mClicked = true;
                 break;
             case MotionEvent.ACTION_UP: // タッチが終わったときはmClickedをfalseにします
+            case MotionEvent.ACTION_MOVE: // タッチではなくフリックやスクロールの時はfalseにします
                 mClicked = false;
                 break;
             default:
